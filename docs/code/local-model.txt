@@ -1,0 +1,16 @@
+val config = EngineConfig(
+    modelPath = modelFile.absolutePath,
+    backend = Backend.CPU(),
+    maxNumTokens = 512,
+)
+Engine(config).use { engine ->
+    engine.initialize()
+    engine.createConversation(conversationConfig).use { chat ->
+        val text = StringBuilder()
+        chat.sendMessageAsync(prompt).collect { chunk ->
+            text.append(chunk.toString())
+            onText(text.toString())
+        }
+        text.toString()
+    }
+}

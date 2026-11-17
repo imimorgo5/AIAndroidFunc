@@ -1,0 +1,10 @@
+val model = Firebase.ai(
+    app = app,
+    backend = GenerativeBackend.googleAI(),
+).generativeModel(
+    modelName = config.modelName,
+    generationConfig = generationConfig {
+        maxOutputTokens = 1024
+    },
+)
+val response = model.generateContent(prompt)

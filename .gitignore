@@ -1,0 +1,64 @@
+# Gradle, Kotlin and Android build outputs (all modules)
+.gradle/
+.kotlin/
+**/build/
+.externalNativeBuild/
+.cxx/
+captures/
+*.apk
+*.aab
+*.apks
+*.hprof
+*.log
+
+# Machine-specific Android SDK and IDE settings
+local.properties
+*.iml
+.idea/
+.vscode/
+
+# Signing keys and credentials
+*.jks
+*.keystore
+keystore.properties
+key.properties
+signing.properties
+.env
+.env.*
+!.env.example
+!.env.sample
+google-services*.json
+service-account*.json
+*-firebase-adminsdk-*.json
+firebase-debug.log*
+.firebase/
+
+# Local model weights and incomplete downloads
+/models/
+*.litertlm
+*.tflite
+*.gguf
+*.safetensors
+*.onnx
+*.part
+
+# Generated presentation/document previews and distribution archives
+/.build-slides/
+/.build-docs/
+/delivery/
+
+# Python caches used by document scripts
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# OS metadata
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
+
+# Keep Gradle Wrapper in version control
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties

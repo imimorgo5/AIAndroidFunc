@@ -1,0 +1,7 @@
+<resources>
+    <item name="demo_scroll" type="id" />
+    <item name="translation_input" type="id" />
+    <item name="cloud_input" type="id" />
+    <item name="model_input" type="id" />
+    <item name="local_model_input" type="id" />
+</resources>

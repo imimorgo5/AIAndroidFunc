@@ -1,0 +1,7 @@
+suspend fun labelImage(bitmap: Bitmap): List<ImageTag> {
+    val image = InputImage.fromBitmap(bitmap, 0)
+    return labeler.process(image).await()
+        .sortedByDescending { it.confidence }
+        .take(5)
+        .map { ImageTag(it.text, it.confidence) }
+}

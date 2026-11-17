@@ -1,0 +1,8 @@
+suspend fun prepareTranslation() {
+    translator.downloadModelIfNeeded(
+        DownloadConditions.Builder().build()
+    ).await()
+}
+
+suspend fun translate(text: String): String =
+    translator.translate(text).await()

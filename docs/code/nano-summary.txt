@@ -1,0 +1,8 @@
+val options = SummarizerOptions
+    .builder(context)
+    .setInputType(ARTICLE)
+    .setOutputType(THREE_BULLETS)
+    .setLanguage(ENGLISH)
+    .build()
+val summarizer =
+    Summarization.getClient(options)

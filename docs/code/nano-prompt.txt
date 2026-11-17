@@ -1,0 +1,8 @@
+if (model.checkStatus() != AVAILABLE) {
+    return "Модель недоступна"
+}
+val response = model.generateContent(
+    "Give 3 Kotlin tips."
+)
+return response.candidates
+    .firstOrNull()?.text.orEmpty()

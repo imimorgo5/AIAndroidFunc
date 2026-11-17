@@ -1,0 +1,6 @@
+private val translator = Translation.getClient(
+    TranslatorOptions.Builder()
+        .setSourceLanguage(TranslateLanguage.ENGLISH)
+        .setTargetLanguage(TranslateLanguage.RUSSIAN)
+        .build()
+)
